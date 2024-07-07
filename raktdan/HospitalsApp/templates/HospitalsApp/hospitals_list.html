@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hospital List</title>
+</head>
+<body>
+    <div>
+        <h1>hospital's List</h1>
+    </div>
+    <div style="display:flex;gap:20px;justify-content:space-evenly;gap: 10px;flex-wrap: wrap;">
+        {% for hospital in hospitals  %}
+        <div style="width: 22%;padding:20px 15px;border:1px solid black">
+            <h3>Name : {{hospital.name}}</h3>
+            <h3>State : {{hospital.state}}</h3>
+            <h3>District : {{hospital.district}}</h3>
+            <h3>Address : {{hospital.address}}</h3>
+        </div>    
+    {% endfor %}
+    </div>
+
+</body>
+</html>
