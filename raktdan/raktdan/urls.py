@@ -20,5 +20,7 @@ import users
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('users/',include("users.urls"), name="users")
+    path('users/',include("users.urls"), name="users"),
+
+    path('blood_bank/',include("bloodBankApp.urls"), name="blood_bank"),
 ]
