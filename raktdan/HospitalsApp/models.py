@@ -15,6 +15,9 @@ class HospitalDetail(models.Model):
     pin = models.CharField(max_length=6)
     latitude = models.FloatField()
     longitude = models.FloatField()
+    
+    def __str__(self):
+        return f"{self.name}-{self.state}-{self.district}"
 
-
-
+# class HospitalService(models.Model):
+#     pass
