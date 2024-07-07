@@ -20,5 +20,9 @@ import users
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('users/',include("users.urls"), name="users")
+    path('users/',include("users.urls"), name="users"),
+    
+    
+    path('locations/',include("locationApp.urls"), name="locations")
+
 ]
