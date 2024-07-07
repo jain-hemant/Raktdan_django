@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital List</title>
+</head>
+<body>
+    <div>
+        <h1>Hospital's List</h1>
+    </div>
+    <ul>
+    {% for Hospital in Hospitals  %}
+        <h3>Name : {{Hospital.name}}</h3>
+        <h3>State : {{Hospital.state}}</h3>
+        <h3>District : {{Hospital.district}}</h3>
+        <h3>Address : {{Hospital.address}}</h3>
+        
+    {% endfor %}
+</ul>
+</body>
+</html>

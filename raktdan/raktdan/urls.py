@@ -21,7 +21,7 @@ import users
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('users/',include("users.urls"), name="users"),
-    
+    path("hospitals/",include("HospitalsApp.urls")),
     
     path('locations/',include("locationApp.urls"), name="locations")
 
