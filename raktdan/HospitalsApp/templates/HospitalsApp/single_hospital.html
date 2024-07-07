@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"><title>hospital List</title>
+    <style>
+        *{
+            margin:0px;
+            padding: 0px;
+        }
+        .nav{
+            background-color: aquamarine;
+            position: relative;
+            top:0px;
+            left:0px;
+            right: 0px;
+            width: 100%;
+            ;
+        }
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            color:red;
+            text-align: center;
+            font-size:xx-large;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <h1>Hospital's List</h1>
+    </div>
+    <div>
+        <div class="card" style="width: 80%;">
+            {% comment %} <img src="..." class="card-img-top" alt="..."> {% endcomment %}
+            <div class="card-body">
+                <h3>Name : {{hospital.name}}</h3>
+                <h3>Contact : {{hospital.contact}}</h3>
+                <h3>Website : {{hospital.website}}</h3>
+                <h3>Country : {{hospital.country}}</h3>
+                <h3>State : {{hospital.state}}</h3>
+                <h3>District : {{hospital.district}}</h3>
+                <h3>Address : {{hospital.address}}</h3>
+                <h3>Pin Code : {{hospital.pin}}</h3>
+                <h3>Latitude : {{hospital.latitude}}</h3>
+                <h3>Longitude: {{hospital.longitude}}</h3>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+            <div>
+                <a href="{% url 'viewHospital' %}"><button class="btn btn-success">Back</button></a>
+                <a href="{% url 'updateHospital' hospital.pk %}"><button class="btn btn-primary">Update</button></a>
+                <a href="{% url 'deleteHospital' hospital.pk %}"><button class="btn btn-danger">Delete</button></a>
+            </div>
+          </div>
+    </div>
+    {% comment %} <div style="display:flex;gap:20px;justify-content:space-evenly;gap: 10px;flex-wrap: wrap;">
+        <div style="width: 22%;padding:20px 15px;border:1px solid black;background-color:rgb(124, 117, 119);box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;">
+            
+        </div>     
+    </div> {% endcomment %}
+
+</body>
+</html>
